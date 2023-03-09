@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
+import statsmodels as stats
+from stats.tsa.holtwinters import ExponentialSmoothing
 from PIL import Image
 #page configuration
 image = Image.open('inno.png')
