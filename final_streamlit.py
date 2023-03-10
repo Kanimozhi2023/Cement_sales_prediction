@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-import statsmodels 
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from PIL import Image
 #page configuration
