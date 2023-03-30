@@ -15,7 +15,7 @@ if uploaded_file is not None:
     cement = pd.read_excel(uploaded_file)
     cement['month'] = cement['month'].apply(lambda x: x.strftime('%D-%M-%Y'))
     
-    hwe_model_mul_add = ExponentialSmoothing(cement["sales"][:130], seasonal = "add", trend = "add", seasonal_periods = 12).fit()
+    hwe_model_mul_add = ExponentialSmoothing(cement["sales"][:130], seasonal = "mul", trend = "add", seasonal_periods = 12).fit()
     
     newdata_pred = hwe_model_mul_add.predict(len(cement['sales']), len(cement['sales'])-3+level)
     
