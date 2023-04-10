@@ -13,8 +13,11 @@ mycursor = connection.cursor()
 data = pd.read_excel(r"C:\Users\DHANRAJ\Downloads\ML model\salesxl.xlsx")
 print(data)
 
-
 data.shape
+#Auto EDA
+import dtale
+d = dtale.show(data)
+d.open_browser()
 
 #Manual EDA
 data.isnull().sum()
