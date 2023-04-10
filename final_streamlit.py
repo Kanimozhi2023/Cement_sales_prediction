@@ -17,7 +17,7 @@ if uploaded_file is not None:
     
     hwe_model_mul_add = ExponentialSmoothing(cement["sales"][:130], seasonal = "mul", trend = "add", seasonal_periods = 12).fit()
     
-    newdata_pred = hwe_model_mul_add.predict(len(cement['sales']), len(cement['sales'])-3+level)
+    newdata_pred = hwe_model_mul_add.predict(len(cement['sales']), len(cement['sales'])+level)
     
     
     st.subheader("For exponential model")
